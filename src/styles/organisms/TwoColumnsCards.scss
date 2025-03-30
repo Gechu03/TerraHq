@@ -1,0 +1,77 @@
+.twoColumnsCard {
+   width: 100%;
+   display: flex;
+   background: $colot-beige;
+   flex-direction: column;
+   @media (min-width: 1200px) {
+      flex-direction: row;
+      height: 480px;
+   }
+   &__content {
+      background-color: white;
+      height: fit-content;
+      padding: 24px;
+      display: flex;
+      color: $color-primary;
+      flex-direction: column;
+      gap: 24px;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      width: 100%;
+      -webkit-transition: width 0.4s ease-in-out;
+      -moz-transition: width 0.4s ease-in-out;
+      -o-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      @media (min-width: 768px) {
+         width: 70%;
+      }
+      @media (min-width: 1200px) {
+         width: 50%;
+         padding: 80px;
+      }
+
+      &__title {
+         @include font-h2;
+      }
+
+      &__desc {
+         @include font-body;
+      }
+   }
+
+   &__imageContainer {
+      position: relative;
+      width: 50%;
+      -webkit-transition: width 0.4s ease-in-out;
+      -moz-transition: width 0.4s ease-in-out;
+      -o-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      @media (max-width: 1200px) {
+         height: 300px;
+         order: -1;
+         display: flex;
+         align-self: end;
+         width: 70%;
+      }
+
+      @media (max-width: 768px) {
+         width: 100% !important;
+      }
+
+      & > .pill {
+         position: absolute;
+         top: 16px;
+         right: 16px;
+         z-index: 10;
+      }
+      &__image {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         object-fit: cover;
+         align-self: center;
+      }
+   }
+}

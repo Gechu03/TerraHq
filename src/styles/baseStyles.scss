@@ -1,0 +1,91 @@
+body {
+   font-family: "Manrope", Arial;
+   font-feature-settings:
+      "liga" off,
+      "clig" off;
+}
+
+@mixin font-button {
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 28px;
+}
+
+@mixin font-h1 {
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 73px; /* 114.063% */
+   letter-spacing: 1px;
+
+   @media (min-width: 435px) {
+      font-size: 48px;
+      line-height: 58px;
+   }
+
+   @media (min-width: 768px) {
+      font-size: 56px;
+      line-height: 65px;
+   }
+
+   @media (min-width: 1024px) {
+      font-size: 64px;
+      line-height: 73px;
+   }
+}
+
+@mixin font-h2 {
+   font-size: 22px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 130%;
+
+   @media (min-width: 435px) {
+      font-size: 28px;
+   }
+
+   @media (min-width: 768px) {
+      font-size: 34px;
+   }
+
+   @media (min-width: 1024px) {
+      font-size: 40px;
+   }
+}
+
+@mixin font-body {
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 130%;
+
+   @media (min-width: 435px) {
+      font-size: 16px;
+   }
+
+   @media (min-width: 768px) {
+      font-size: 17px;
+   }
+
+   @media (min-width: 1024px) {
+      font-size: 18px;
+   }
+}
+
+$color-primary: #1a191d;
+$color-secondary: #189b5c;
+$colot-beige: #efefef;
+
+@import "./reset.scss";
+@import "./atoms/Button.scss";
+@import "./atoms/Pill.scss";
+@import "./templates/Hero.scss";
+@import "templates/BlogSection.scss";
+@import "organisms/TwoColumnsCards.scss";
+@import "organisms/CardsRow.scss";
+@import "molecules/Card.scss";
+@import "templates/TimeLineSection.scss";
+@import "organisms/TimeLine.scss";
+@import "organisms/CardTwoImages.scss";
+@import "templates/Header.scss"

@@ -1,0 +1,21 @@
+.button {
+   padding: 16px 40px;
+   color: #fff;
+   width: fit-content;
+   transition: all 0.3s ease-in-out;
+   @include font-button;
+   &--primary {
+      background-color: #189b5c;
+
+      &:hover {
+         background-color: #f78bd8;
+      }
+   }
+
+   &--secondary {
+      background-color: #0f0f0f;
+      &:hover {
+         background-color: #f78bd8;
+      }
+   }
+}

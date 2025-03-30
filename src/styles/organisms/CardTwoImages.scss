@@ -1,0 +1,62 @@
+.cardTwoImages {
+   background-color: $colot-beige;
+   display: flex;
+
+   flex-direction: column;
+   @media (min-width: 1024px) {
+      flex-direction: row;
+   }
+   &__content {
+      width: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @media (min-width: 768px) {
+         padding: 48px;
+      }
+      @media (min-width: 1024px) {
+         padding: 80px;
+         width: 50%;
+      }
+
+      &__title {
+         @include font-h2;
+      }
+
+      &__desc {
+         @include font-body;
+      }
+   }
+
+   &__images {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @media (min-width: 1024px) {
+         width: 50%;
+      }
+      &__element {
+         height: 200px;
+         position: relative;
+
+         &:has(.pill) {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+         }
+         & > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+
+         & > .pill {
+            margin-bottom: 12px;
+            margin-right: 12px;
+         }
+      }
+   }
+}

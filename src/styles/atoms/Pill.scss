@@ -1,0 +1,13 @@
+.pill {
+   border-radius: 9999px;
+   padding: 8px 12px;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   width: fit-content;
+   &--primary {
+      background: $color-secondary;
+      color: white;
+   }
+}
